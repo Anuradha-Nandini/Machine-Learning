@@ -1,0 +1,101 @@
+{
+  "saved_on": "2026-10-13",
+  "python": "3.12.3",
+  "scikit_learn": "1.8.0",
+  "pandas": "3.0.2",
+  "numpy": "2.4.4",
+  "features": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "scaled_time",
+    "scaled_amount"
+  ],
+  "target": "Class (0 = legitimate, 1 = fraud)",
+  "split": "80/20 stratified, random_state=42",
+  "models": {
+    "Logistic Regression": "class_weight='balanced', max_iter=1000",
+    "Isolation Forest": "n_estimators=100, contamination=train fraud rate"
+  },
+  "test_metrics": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.9752405455891164,
+      "Precision": 0.05623306233062331,
+      "Recall": 0.8736842105263158,
+      "F1-score": 0.10566518141311267,
+      "ROC-AUC": 0.9658392242808925,
+      "cm": [
+        [
+          55258,
+          1393
+        ],
+        [
+          12,
+          83
+        ]
+      ]
+    },
+    {
+      "Model": "Isolation Forest",
+      "Accuracy": 0.9975504881401333,
+      "Precision": 0.2708333333333333,
+      "Recall": 0.2736842105263158,
+      "F1-score": 0.27225130890052357,
+      "ROC-AUC": 0.9399131710407862,
+      "cm": [
+        [
+          56581,
+          70
+        ],
+        [
+          69,
+          26
+        ]
+      ]
+    },
+    {
+      "Model": "Hybrid (LR or IF)",
+      "Accuracy": 0.9746237620272794,
+      "Precision": 0.05493050959629384,
+      "Recall": 0.8736842105263158,
+      "F1-score": 0.10336239103362391,
+      "ROC-AUC": null,
+      "cm": [
+        [
+          55223,
+          1428
+        ],
+        [
+          12,
+          83
+        ]
+      ]
+    }
+  ]
+}
